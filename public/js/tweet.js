@@ -18,7 +18,7 @@ const Twitter = require('twitter')
   })
 
 
-function FunTweeet(msg){
+function TweeetPost(msg){
   //Twitterにメッセージをツイートする
   // https://github.com/desmondmorris/node-twitter
   client.post('statuses/update', {status: msg}, function(error, tweet, response) {
@@ -26,6 +26,7 @@ function FunTweeet(msg){
       console.log(tweet);
     }
   });
+  alert(msg);
 };
 
 
