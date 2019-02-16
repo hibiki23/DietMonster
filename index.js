@@ -1,6 +1,3 @@
-// 外部ファイル
-var TweetModule = require('./sample');
-
 // expressモジュールを読み込む
 const express = require('express');
 
@@ -11,7 +8,7 @@ const app = express();
 app.set('port',(process.env.PORT||5000))
 app.use(express.static('public'));
 
-// ルート（http://localhost/）にアクセスしてきたときに「Hello」を返す
+// ルート（http://localhost/api）にアクセスしてきたときに「Hello」を返す
 app.get('/api', (req, res) => res.send(
   'Hello'
   ));
@@ -21,6 +18,3 @@ app.listen(app.get('port'),function(){
   console.log("Node app is running at localhost:" + app.get('port'));
 })
 
-function Tweet(){
-  TweetModule.FunTweeet("Hello Diet World !")
-}

@@ -2,8 +2,6 @@
 
 const Twitter = require('twitter')
 
-
-exports.FunTweeet = function(msg){
   // public リポジトリなので、秘密にしてください
   // https://developer.twitter.com 
   // にログインして入力してください
@@ -20,6 +18,7 @@ exports.FunTweeet = function(msg){
   })
 
 
+function FunTweeet(msg){
   //Twitterにメッセージをツイートする
   // https://github.com/desmondmorris/node-twitter
   client.post('statuses/update', {status: msg}, function(error, tweet, response) {
