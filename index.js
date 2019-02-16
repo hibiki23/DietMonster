@@ -8,9 +8,12 @@ const app = express();
 app.set('port',(process.env.PORT||5000))
 app.use(express.static('public'));
 
-// ルート（http://localhost/api）にアクセスしてきたときに「Hello」を返す
-app.get('/api', (req, res) => res.send(
-  'Hello'
+// tweet.jsの読み込み
+var tweet = require('./tweet.js')
+
+// ルート（http://localhost/tweet）にアクセスしてきたときに「Hello」を返す
+app.get('/tweet', (req, res) => res.send(
+  tweet.TweeetPost("Hello Diet World !!")
   ));
 
 // サーバを立てる

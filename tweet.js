@@ -18,7 +18,7 @@ const Twitter = require('twitter')
   })
 
 
-function TweeetPost(msg){
+exports.TweeetPost=function(msg){
   //Twitterにメッセージをツイートする
   // https://github.com/desmondmorris/node-twitter
   client.post('statuses/update', {status: msg}, function(error, tweet, response) {
