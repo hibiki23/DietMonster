@@ -6,9 +6,12 @@ const app = express();
 
 //Heroku へデプロイした際は、ポートは process.env.PORT が適用される
 app.set('port',(process.env.PORT||5000))
+//app.use(express.static('public'));
 
 // ルート（http://localhost/）にアクセスしてきたときに「Hello」を返す
-app.get('/', (req, res) => res.send('Hello Diet World !'));
+app.get('/api', (req, res) => res.send(
+  'Hello'
+  ));
 
 // サーバを立てる
 app.listen(app.get('port'),function(){
