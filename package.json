@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "require": "^2.4.20",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "uglify-js": ">=2.6.0"
   },
   "devDependencies": {},
   "scripts": {
