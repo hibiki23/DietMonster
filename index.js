@@ -16,9 +16,11 @@ app.get('/tweet', (req, res) => res.send(
   tweet.TweeetPost("Hello Diet World !!")
   ));
 
-app.get('/post',function(req,res){
-  tweet.TweeetPost("Hello Diet World Point:" + req.json),
-  res.send("MonsterImage")
+app.post('/api/post',(req, res) => {
+  // var json_data= JSON.parse(req);
+  // var score = json_data.Score;
+  tweet.TweeetPost("Hello Diet World Point: "+String(5));
+  res.json(req)
 });
 
 // サーバを立てる
