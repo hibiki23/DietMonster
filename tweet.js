@@ -21,12 +21,12 @@ const Twitter = require('twitter')
 exports.TweeetPost=function(msg){
   // Twitterにメッセージをツイートする
   // https://github.com/desmondmorris/node-twitter
-  client.post('status/update', {status: msg}, function(error, tweet, response) {
+  client.post('statuses/update', {status: msg}, function(error, tweet, response) {
     if (!error) {
       console.log(tweet);
     }
+    console.log(error);
   });
-  alert(msg);
 };
 
 
