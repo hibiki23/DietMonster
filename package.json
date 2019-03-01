@@ -1,22 +1,17 @@
 {
-  "name": "diet-monster-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.16.4",
-    "require": "^2.4.20",
-    "twitter": "^1.7.1",
-    "uglify-js": ">=2.6.0"
-  },
-  "devDependencies": {},
+  "name": "dietmonsterapi",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
-  "engines": {
-    "node": "10.15.1",
-    "npm": "6.4.1"
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "twitter": "^1.7.1"
   }
 }
