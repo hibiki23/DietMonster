@@ -16,6 +16,11 @@ app.get('/tweet', (req, res) => res.send(
   tweet.TweeetPost("Hello Diet World !!")
   ));
 
+app.get('/post',function(req,res){
+  tweet.TweeetPost("Hello Diet World Point:" + req.json),
+  res.send("MonsterImage")
+});
+
 // サーバを立てる
 app.listen(app.get('port'),function(){
   console.log("Node app is running at localhost:" + app.get('port'));
